@@ -1,0 +1,138 @@
+<html lang="en">
+<head>
+
+    <!-- My First JS code-->
+    <script>
+        var links = ["jxprojects.github.io/home/"];
+
+        openLink = function () {
+            var randIdx = Math.random() * links.length;
+            randIdx = parseInt(randIdx, 10);
+            var link = 'http://' + links[randIdx];
+            window.open(link);
+        };
+    </script>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello world</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <!-- ICON IN HEAD -->
+    <link rel="icon" href="images/logo.png">
+</head>
+<body>
+    <!-- BAR WITH "WELCOME", PAGE OPTS -->
+    <div class="sel">
+        <a href="../home"><img src="images/logo.png"></a>
+        <button onclick="openLink();">A Project</button>
+        <a href="../about">About</a>
+        <hr>
+    </div>
+
+    <div class="main">
+        <h1>Wordle Solver</h1>
+        <hr id="crossline">
+        <p class="da"><mark>Julia Kozak - Jan 2022</mark></p>
+        <p>
+            So wordle is popular. I thought it would be interesting to try to make an AI 
+            that would solve for the best possible sequence of guesses to win.
+        </p>
+        <p>
+            The first task was to build the game. We probably all know the rules at this
+            point, but to summarize, you try to guess a certain five-letter word in six or less guesses based on
+            clues that the game gives you about previous guesses. If a certain letter in 
+            your guess is in the same place as it is in the correct word, it will be marked
+            as green. If a letter is in the word but in the wrong place, it's marked as yellow.
+            If it does not show up, it is marked as black. One thing to note about this is that
+            if a certain letter shows up strictly once in the correct word but is included 
+            more than once in a guess, only one of the letters will actually be marked green or
+            yellow. For instance, if your correct word is "metal" but you guess "gamma," your 
+            guess will show as <mark id="black">g</mark><mark id="yellow">a</mark><mark id="yellow">m</mark><mark id="black">m</mark><mark id="black">a</mark>,
+            not <mark id="black">g</mark><mark id="yellow">a</mark><mark id="yellow">m</mark><mark id="yellow">m</mark><mark id="yellow">a</mark>.
+            Also, there are about 13000 possible guesses with about 3000 possible correct answers, each taken
+            from text files.
+        </p>
+        <p>
+            For my Java terminal version, the command line prompts you to type in a potential five-letter
+            guess, and it will print the coloring with text background colors (you also have the 
+            option of watching the AI play).
+        </p>
+        <p id="cont">
+            Now for solving, the algorithm goes like this:
+        </p>
+        <p class="bigtab">
+            * For every potential guess you can make at a given turn, consider all possible 
+            sequences of colorings you can receive in return. <br>
+            * For every one of those, compute the probability of receiving that coloring, 
+            as well as the number of potential answers you can limit your search space to
+            given that coloring (this gives your expected value for a given guess). <br>
+            * Store all those expected values and pick the word corresponding to the lowest
+            one as your next guess. <br>
+            * Cut down your potential answer search space based 
+            on the sequence of colors received on your last guess (if a given answer has
+            a different letter in a place that is green, eliminate it, etc.).
+        </p>
+        <p>
+            It's clear that, with several thousand possible guesses and answers to start with 
+            as well as 243 cases to check, the search for the best first guess would take quite
+            a while. I'd estimate 20 minutes, but I ran through this only a few times and 
+            modified my program to print the first 20 best guesses so I could tell my AI to just
+            pick one of these each first guess (and here's a text file with the best 100 guesses
+            if you're interested: <a href="">this</a>).
+        </p>
+        <p>
+            But the good thing is that the AI (kind of) gains efficiency as it cuts down its search
+            space with each next guess. For instance, the first guess 'irate' limits the number 
+            of potential answers to about 70 on average, which is a lot better than a factor of 3000.
+            But there's still a chance of the program being horribly inefficient when it gets one of 
+            the worse cases of colorings, plus the fact that it's still checking all 13000 possible
+            guesses.
+        </p>
+        <p>
+            So, in an effort to save some time (this is also the current state of the program), the AI
+            cuts his potential guess search space according to the coloring as well. The problem is, 
+            it now sometimes does this: <br>
+            <img id="aw" src="images/smh.png"> <br>
+            Hey, I do that too, but guess like "flaky" could have determined the possibilities of four 
+            potential letters there, so chances are that wasn't the best way to go about solving. Likewise,
+            for cases of missing just one letter (ex. <mark id="black">f</mark><mark id="green">i</mark><mark id="green">g</mark><mark id="green">h</mark><mark id="green">t</mark>)
+            it kind of just becomes a guessing game with the rest of the possibilities.
+        </p>
+        <p>
+            It's definitely a lot more efficient though. A 30-40 second guess from before now takes 
+            a fraction of a second, and the average number of guesses to win is about 3 or 4.
+        </p>
+         <br> <br> <br>
+        
+        <p id="sources">
+            The repo to my game/AI (also to this site) (compile Wordle.java): <a href="">this</a>
+        </p>
+    </div>
+    
+
+
+    <footer>
+        <hr>
+        <p> Authors: Julia Kozak and Maxwell Ito</p> <br>
+        <a href="mailto:jules351w@gmail.com"> <img src="images/mailicon.png">  mail to Julia </a> <br>
+        <a href="mailto:maxyuanito@gmail.com"> <img src="images/mailicon.png">  mail to Max </a> <br>
+        <p id="xtra">Row for consistency</p>
+        <div class="lc"> 
+            <a href="https://github.com/jkozak30"><img src="images/githubicon.png">  jkozak30</a> <br>
+            <a href="https://github.com/miyto"><img src="images/githubicon.png">  miyto</a> <br>
+            <a href="https://github.com/jxprojects"><img src="images/githubicon.png">  jxprojects</a>
+        </div>
+    </footer>
+    
+    
+ 
+</body>
+</html>

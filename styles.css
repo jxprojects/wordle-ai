@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: white;
+    background-size: cover;
+    width: 1200px;
+}
+.sel h1 {
+    margin: 0;
+    font-weight: 400;
+    padding-top: 60px;
+    font-size: 250%;
+    color: white;
+    
+    text-align: center;
+}
+.sel {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: rgb(1, 1, 1, 0.85);
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 10px;
+}
+.sel li {
+    display: inline-block; /* NEW */
+}
+.sel a{
+    font-weight: 100;
+    color: white;
+    border: none;
+     /* aspect must apply to innermost */
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.sel button {
+    font-weight: 100;
+    padding: 0;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    font-size: 95%;
+    font-family: 'IBM Plex Mono', monospace;
+    color: white;
+
+}
+.sel img{
+    max-width: 14px;
+}
+.sel hr{
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.076);
+    border-color: rgba(0, 0, 0, 0.0);
+    
+}
+
+
+.main h1 {
+    font-style: italic;
+    margin-left: 20%;
+    font-weight: 200;
+}
+.main .da {
+    text-indent: 0;
+    margin-left: 20%;
+    font-weight: 100;
+    margin-top: 20px;
+    font-size: 15px;
+}
+.main p {
+    margin-left: 20%;
+    margin-right: 20%;
+    font-weight: 100;
+    font-size: 12px;
+    text-indent: 40px;
+}
+.main .bigtab {
+    text-indent: 0;
+    margin-left: 25%;
+    font-weight: 200;
+}
+.main a {
+    color: blue;
+}
+#crossline {
+    margin-right: 20%;
+    margin-left: 42%;
+    margin-top: -40px;
+}
+#cont {
+    text-indent: 0;
+}
+mark {
+    padding: 2px;
+    background-color: rgb(1, 1, 1, 0.85);
+    color: white;
+}
+#yellow {
+    font-weight: 400;
+    color: white;
+    background-color: rgb(200, 200, 0);
+}
+#green {
+    font-weight: 400;
+    color: white;
+    background-color: green;
+}
+#black {
+    font-weight: 400;
+    color: white;
+    background-color: black;
+}
+
+.imgq {
+    margin-left: 20%;
+    display: block;
+}
+.imgq img {
+    width: 170px;
+}
+#oner {
+    width: 355px;
+}
+#threer {
+    width: 355px;
+}
+#sources {
+    text-indent: 0;
+    font-weight: 300;
+}
+#aw {
+    margin: 10px;
+    float: left;
+    width: 200px;
+}
+
+ /* FOOTER TAGS */
+ footer {
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    color:rgb(1, 1, 1, 0.85);
+    margin-top: 30px;
+    font-size: 12px;
+    font-weight: 300;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+footer img {
+    margin-top: 10px;
+    width: 10px;
+}
+footer p {
+    margin: 0;
+    padding: 0;
+}
+footer a {
+    text-decoration: none;
+    color: black;
+}
+.lc {
+    margin-left: 40%;
+    margin-top: -69;
+}
+#xtra {
+    margin-top: 8px;
+}
+
+@media screen and (max-width:600px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'IBM Plex Mono', monospace;
+        background-color: white;
+        background-size: cover;
+        width:auto;
+    }
+    canvas {
+        margin-top: -740px;
+        margin-left: 15px;
+    }
+    .sel h1 {
+        margin: 0;
+        font-weight: 400;
+        padding-top: 60px;
+        font-size: 150%;
+        color: white;
+        text-align: center;
+    }
+    .sel {
+        padding: 0;
+        margin: 0;
+        margin-top: 0px;
+        padding-top: 20px;
+        text-align: center;
+        background-color: rgb(1, 1, 1, 0.85);
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    .sel a {
+        font-size: 70%;
+    }
+    .sel button {
+        font-size: 70%;
+    }
+    .sel img {
+        max-width: 10px;
+    }
+    .main {
+        margin-left: 15px;
+    }
+    .main h1 {
+        margin-left: 0;
+    }
+    #crossline {
+        background-color: rgba(0, 0, 0, 0);
+        border-color: rgba(0, 0, 0, 0);
+    }
+    .main p {
+        font-size: 60%;
+        margin-right: 15px;
+        margin-left: 0px;
+        text-indent: 5px;
+    }
+    .main .da {
+        margin-left: 0;
+    }
+    .main .bigtab {
+        margin-left: 10px;
+    }
+    .imgq img {
+        margin-top: 10px;
+        margin-left: -15;
+        float: center;
+    }
+    #oner {
+        margin-left: 10px;
+        width: 90%;
+        float: center;
+        margin-top: 10px;
+    }
+    #threer {
+        width: 90%;
+        margin-left: 10px;
+        float: center;
+        margin-top: 10px;
+    }
+    footer {
+        margin: 0;
+        padding: 0;
+        border-radius: 5px;
+        color:rgb(1, 1, 1, 0.85);
+        margin-top: 0px;
+        font-size: 7px;
+        font-weight: 300;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    footer img {
+        margin-top: 0px;
+        width: 3%;
+    }
+    footer p {
+        margin: 0;
+        padding: 0;
+    }
+    .lc {
+        margin-left: 40%;
+        margin-top: -27;
+    }
+    #xtra {
+        margin-top: 0px;
+    }
+    .sources {
+        margin-right: 15px;
+    }
+
+}
