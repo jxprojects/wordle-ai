@@ -276,5 +276,8 @@ footer a {
     .sources {
         margin-right: 15px;
     }
+    #aw {
+        width:95%;
+    }
 
 }
