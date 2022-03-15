@@ -4,7 +4,7 @@ body {
     font-family: 'IBM Plex Mono', monospace;
     background-color: white;
     background-size: cover;
-    width: 1200px;
+    width: 900px;
 }
 .sel h1 {
     margin: 0;
@@ -21,7 +21,7 @@ body {
     text-align: center;
     background-color: rgb(1, 1, 1, 0.85);
     margin-left: 20%;
-    margin-right: 20%;
+    margin-right: 0%;
     padding-top: 10px;
 }
 .sel li {
@@ -71,7 +71,7 @@ body {
 }
 .main p {
     margin-left: 20%;
-    margin-right: 20%;
+    margin-right: 0%;
     font-weight: 100;
     font-size: 12px;
     text-indent: 40px;
@@ -85,8 +85,8 @@ body {
     color: blue;
 }
 #crossline {
-    margin-right: 20%;
-    margin-left: 42%;
+    margin-right: 0%;
+    margin-left: 50%;
     margin-top: -40px;
 }
 #cont {
@@ -146,7 +146,7 @@ mark {
     font-size: 12px;
     font-weight: 300;
     margin-left: 20%;
-    margin-right: 20%;
+    margin-right: 0%;
 }
 footer img {
     margin-top: 10px;
@@ -177,27 +177,16 @@ footer a {
         background-size: cover;
         width:auto;
     }
-    canvas {
-        margin-top: -740px;
-        margin-left: 15px;
-    }
-    .sel h1 {
-        margin: 0;
-        font-weight: 400;
-        padding-top: 60px;
-        font-size: 150%;
-        color: white;
-        text-align: center;
-    }
+   
     .sel {
         padding: 0;
         margin: 0;
         margin-top: 0px;
-        padding-top: 20px;
         text-align: center;
         background-color: rgb(1, 1, 1, 0.85);
         margin-left: 3%;
         margin-right: 3%;
+        padding-top: 20px;
     }
     .sel a {
         font-size: 70%;
@@ -208,44 +197,43 @@ footer a {
     .sel img {
         max-width: 10px;
     }
-    .main {
-        margin-left: 15px;
-    }
     .main h1 {
-        margin-left: 0;
-    }
-    #crossline {
-        background-color: rgba(0, 0, 0, 0);
-        border-color: rgba(0, 0, 0, 0);
+        margin-left: 15px;
+        font-size: 30px;
     }
     .main p {
-        font-size: 60%;
+        font-size: 13px;
         margin-right: 15px;
-        margin-left: 0px;
-        text-indent: 5px;
-    }
-    .main .da {
-        margin-left: 0;
+        margin-left: 25px;
     }
     .main .bigtab {
-        margin-left: 10px;
+        margin-left: 40px;
     }
-    .imgq img {
-        margin-top: 10px;
-        margin-left: -15;
-        float: center;
+    .main .da {
+        margin-left: 25px;
+        margin-top: 25px;
     }
-    #oner {
-        margin-left: 10px;
-        width: 90%;
-        float: center;
-        margin-top: 10px;
+    .pro {
+        margin-left: 5%;
+        margin-right: 5%;
+    
     }
-    #threer {
-        width: 90%;
-        margin-left: 10px;
-        float: center;
+    .pro img {
+        width: 100%;
+        border: 3px solid rgb(1, 1, 1, 0.85);
+        border-radius: 10px;
+    }
+    .pro a {
+        display: block;
+        border-radius: 5px;
+        text-decoration: none;
         margin-top: 10px;
+        margin-left: 0px;
+        background: rgb(200, 200, 200, 0.3);
+        width: 102%;
+        height: auto;
+        color: rgb(1, 1, 1, 0.85);
+        margin-bottom: 5px;
     }
     footer {
         margin: 0;
@@ -253,14 +241,14 @@ footer a {
         border-radius: 5px;
         color:rgb(1, 1, 1, 0.85);
         margin-top: 0px;
-        font-size: 7px;
+        font-size: 12px;
         font-weight: 300;
         margin-left: 15px;
         margin-right: 15px;
     }
     footer img {
         margin-top: 0px;
-        width: 3%;
+        width: 8px;
     }
     footer p {
         margin: 0;
@@ -268,16 +256,13 @@ footer a {
     }
     .lc {
         margin-left: 40%;
-        margin-top: -27;
+        margin-top: -47;
     }
     #xtra {
         margin-top: 0px;
     }
-    .sources {
-        margin-right: 15px;
-    }
-    #aw {
-        width:95%;
+    #crossline {
+        border-color:rgba(0, 0, 0, 0.0);
     }
 
 }
